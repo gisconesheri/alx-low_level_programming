@@ -18,9 +18,13 @@ int main(void)
 	while (l < 58)
 	{
 		putchar(l);
+		if (l == 57)
+		{
+			break;
+		}
 		putchar(comma);
 		putchar(space);
-		l++;
+		++l;
 	}
 	putchar(10);
 	return (0);
