@@ -11,7 +11,6 @@ int main(void)
 	int L;
 
 	l = 97;
-	L = 65;
 
 	while (l < 123)
 	{
