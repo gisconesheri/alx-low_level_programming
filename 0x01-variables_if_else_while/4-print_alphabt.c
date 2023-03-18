@@ -8,7 +8,6 @@
 int main(void)
 {
 	int l;
-	int L;
 
 	l = 97;
 
