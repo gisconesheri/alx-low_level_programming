@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_last_number - prints the last number in the provided integer
  * @n: number to work on
