@@ -10,7 +10,17 @@
 int print_last_number(int n)
 {
 	/* call the absolute function defined in 6-abs.c*/
-	int absN = _abs(n);
+	int absN;
+
+	if (num >= 0)
+	{
+		absN = n;
+	}
+	else
+	{
+		absN = n * -1;
+	}
+
 	int lastDigit = absN % 10;
 
 	_putchar(lastDigit);
