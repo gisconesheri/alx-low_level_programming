@@ -18,7 +18,7 @@ void print_to_98(int n)
 			{
 				break;
 			}
-			printf(" ,");
+			printf(", ");
 			np++;
 		}
 	}
@@ -31,7 +31,7 @@ void print_to_98(int n)
 			{
 				break;
 			}
-			printf(" ,");
+			printf(", ");
 			np--;
 		}
 	}
