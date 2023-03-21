@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * print_last_number - prints the last number in the provided integer
  * @n: number to work on
@@ -11,8 +9,9 @@ int print_last_number(int n)
 {
 	/* call the absolute function defined in 6-abs.c*/
 	int absN;
+	int lastDigit;
 
-	if (num >= 0)
+	if (n >= 0)
 	{
 		absN = n;
 	}
@@ -21,7 +20,7 @@ int print_last_number(int n)
 		absN = n * -1;
 	}
 
-	int lastDigit = absN % 10;
+	lastDigit = absN % 10;
 
 	_putchar(lastDigit);
 	return (lastDigit);
