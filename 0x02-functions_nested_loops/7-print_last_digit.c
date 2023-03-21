@@ -38,5 +38,6 @@ int print_last_digit(int n)
 			count++;
 			counter++;
 		}
+	}
 	return (lastDigit);
 }
