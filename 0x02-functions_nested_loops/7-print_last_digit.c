@@ -12,6 +12,8 @@ int print_last_digit(int n)
 	/* call the absolute function defined in 6-abs.c*/
 	int absN;
 	int lastDigit;
+	int count = 48;
+	int counter = 0;
 
 	if (n >= 0)
 	{
@@ -24,7 +26,17 @@ int print_last_digit(int n)
 
 	lastDigit = absN % 10;
 
-	_putchar('lastDigit');
+	while (count < 58)
+	{
+		if (lastDigit == counter)
+		{
+			_putchar(count);
+			break;
+		}
+		else
+		{
+			count++;
+			counter++;
+		}
 	return (lastDigit);
 }
-
