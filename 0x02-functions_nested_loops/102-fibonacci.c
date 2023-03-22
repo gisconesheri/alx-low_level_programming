@@ -28,7 +28,6 @@ int main(void)
 		num1 = num2;
 		num2 = num3;
 	}
-	printf("\b\b");
 	putchar(10);
 
 	return (0);
