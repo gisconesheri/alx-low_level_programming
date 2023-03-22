@@ -49,15 +49,7 @@ void normal_year_calcs(int month, int day, int year)
  */
 void print_remaining_days(int month, int day, int year)
 {
-	if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0)
-	{
-		leap_year_calcs(month, day);
-	}
-	else if (year % 4 == 0 && year % 100 == 0)
-	{
-		normal_year_calcs(month, day, year);
-	}
-	else if (year % 4 == 0)
+	if (year % 4 == 0 || year % 400 == 0 || year % 100 == 0)
 	{
 		leap_year_calcs(month, day);
 	}
