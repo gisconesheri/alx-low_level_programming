@@ -8,20 +8,27 @@
 
 int main(void)
 {
-	int num1 = 1;
-	int num2 = 2;
+	unsigned long int num1 = 1;
+	unsigned long int num2 = 2;
 	int i;
 
-	printf("%d, %d, ", num1, num2);
+	printf("%lu, %lu, ", num1, num2);
 
 	for (i = 0; i < 48; i++)
 	{
-		int num3 = num1 + num2;
+		unsigned long int num3 = num1 + num2;
 
-		printf("%d, ", num3);
+		if (i == 47)
+		{
+			printf("%lu", num3);
+			break;
+		}
+
+		printf("%lu, ", num3);
 		num1 = num2;
 		num2 = num3;
 	}
+	printf("\b\b");
 	putchar(10);
 
 	return (0);
