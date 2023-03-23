@@ -10,7 +10,7 @@ int _isupper(int c)
 
 	while (cUpper < 91)
 	{
-		if (c == Cupper)
+		if (c == cUpper)
 		{
 			return (1);
 		}
@@ -19,5 +19,5 @@ int _isupper(int c)
 			cUpper++;
 		}
 	}
-	return (0)
+	return (0);
 }
