@@ -37,6 +37,6 @@ int main(void)
 		num++;
 	}
 
-	putchar(10);
+	printf("\n");
 	return (0);
 }
