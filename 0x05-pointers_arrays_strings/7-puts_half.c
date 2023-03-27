@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * puts_half - prints the half part of a string
  * @str: string to print
@@ -13,11 +14,11 @@ void puts_half(char *str)
 	{
 		count++;
 	}
+
 	if (count % 2 == 0)
 	{
 		pc = count / 2;
-
-		while (pc != count + 1)
+		while (pc != count)
 		{
 			_putchar(*(str + pc));
 			pc++;
@@ -25,10 +26,8 @@ void puts_half(char *str)
 	}
 	else
 	{
-		pc = (count - 1) / 2;
-		pc++;
-
-		while (pc != count + 1)
+		pc = ((count - 1) / 2) + 1;
+		while (pc != count)
 		{
 			_putchar(*(str + pc));
 			pc++;
