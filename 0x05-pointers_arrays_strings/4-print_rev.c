@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_rev - prints a string in reverse order
- * @str: string to print in reverse
+ * @s: string to print in reverse
  */
 void print_rev(char *s)
 {
@@ -9,10 +9,10 @@ void print_rev(char *s)
 
 	while (*(s + count) != '\0')
 	{
-		count ++;
+		count++;
 	}
 
-	while (count >= 0)
+	while (count > 0)
 	{
 		_putchar(*(s + count));
 		count--;
