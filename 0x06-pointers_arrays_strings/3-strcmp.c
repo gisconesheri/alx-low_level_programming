@@ -29,7 +29,7 @@ int _strcmp(char *s1, char *s2)
 {
 	int total = 0;
 	int total2 = 0;
-	int count;
+	int count, diff;
 
 	for (count = 0; s1[count] != '\0'; count++)
 	{
@@ -41,5 +41,11 @@ int _strcmp(char *s1, char *s2)
 		total2 = total2 + get_num(s2[count]);
 	}
 
-	return (total - total2);
+	diff = total - total2;
+	if (diff < 0)
+		return (-1);
+	else if (diff > 0)
+		return (1);
+	else
+		return (0);
 }
