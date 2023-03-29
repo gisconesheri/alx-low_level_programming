@@ -41,6 +41,11 @@ int _strcmp(char *s1, char *s2)
 		total2 = total2 + get_num(s2[count]);
 	}
 
-	diff = (total - total2) / 3.5;
-	return (diff);
+	diff = (total - total2);
+	if (diff < 0)
+		return (-15);
+	else if (diff > 0)
+		return (15);
+	else
+		return (0);
 }
