@@ -1,3 +1,9 @@
+/**
+ * get_num - generates coressponding ascci code for the char
+ * @c: character to conver
+ * Return: integer coressponding to c
+ */
+
 int get_num(char c)
 {
 	int n = 31;
@@ -7,12 +13,18 @@ int get_num(char c)
 		if (c == n)
 		{
 			return (n);
-			break;
 		}
 		n++;
 	}
 	return (0);
 }
+/**
+ * _strcmp - compares two strings
+ * @s1: string one
+ * @s2: string two
+ * Return: number indicating comparison
+ */
+
 int _strcmp(char *s1, char *s2)
 {
 	int total = 0;
