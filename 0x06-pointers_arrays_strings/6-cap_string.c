@@ -25,11 +25,14 @@ char get_upper(char lc)
 
 	return (lc);
 }
-
+/**
+ * cap_string - capitalises the first letter of a word after a separator
+ * @s: string to process
+ * Return: pointer to the changed string
+ */
 
 char *cap_string(char *s)
 {
-	
 	char separators[14] = "\n \t,;.!?\"(){}";
 
 	int i;
