@@ -26,5 +26,6 @@ char *leet(char *s)
 			}
 		}
 	}
+	s[pos] = '\0';
 	return (s);
 }
