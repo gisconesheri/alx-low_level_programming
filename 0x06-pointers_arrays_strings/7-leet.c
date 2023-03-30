@@ -5,7 +5,7 @@
  */
 char *leet(char *s)
 {
-	char to_replace[11] = "aeotlAEOLT";
+	char to_replace[11] = "aeotlAEOTL";
 	char replace_nos[11] = "4307143071";
 
 	int i;
