@@ -32,6 +32,8 @@ char get_upper(char lc)
  */
 
 char *cap_string(char *s)
+
+
 {
 	char separators[14] = "\n \t,;.!?\"(){}";
 
