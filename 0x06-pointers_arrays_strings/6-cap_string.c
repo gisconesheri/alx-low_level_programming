@@ -52,5 +52,6 @@ char *cap_string(char *s)
 			}
 		}
 	}
+	s[pos] = '\0';
 	return (s);
 }
