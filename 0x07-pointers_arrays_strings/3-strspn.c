@@ -9,30 +9,44 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j;
-	unsigned int len_of_accept = 0;
-	unsigned int count = 0;
+	unsigned int i, j, run, m;
+	unsigned int count;
 	unsigned int max = 0;
-
-
-
-	while (accept[len_of_accept] != '\0')
-	{
-		len_of_accept++;
-	}
+	char found[99];
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; accept[j] != '\0'; j++)
+		run = 1;
+		printf("matching %c\n", s[i]);
+		for (count = 0; count < 99; count++)
 		{
-			if (s[i] == accept[j])
+			if (s[i] == found[count])
 			{
-				count++;
-				if (i + 1 > max)
-					max = i + 1;
+				printf("%c already found at %d\n", s[i], max);
+				run = 0;
+				break;
+			}
+		}
+
+		if (run == 1)
+		{
+			printf("running the accept string\n");
+			for (j = 0; accept[j] != '\0'; j++)
+			{
+				if (s[i] == accept[j])
+				{
+					found[i] = accept[j];
+					m = i + 1;
+					if (m > max)
+					{
+						printf("%c found, setting max to %d\n", s[i], i + 1);
+						max = m;
+					}
+				}
 			}
 		}
 	}
-	printf("count: %d, len_of_accept: %d\n", count, len_of_accept);
+
+	printf("max is %d\n", max);
 	return (max);
 }
