@@ -11,7 +11,7 @@ int main(void)
 	int num;
 
 	num = 1;
-	printf("%d", n);
+	printf("%d", num);
 
 	while (num < 101)
 	{
