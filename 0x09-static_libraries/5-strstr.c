@@ -1,3 +1,10 @@
+/**
+ * _strstr - find needle in the haysatck
+ * @haystack: string within whicj to searc
+ * @needle: string to search
+ * Return: pointer to the needle
+ */
+
 char *_strstr(char *haystack, char *needle)
 {
 	int i, j;
