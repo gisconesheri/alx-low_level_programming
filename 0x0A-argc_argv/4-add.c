@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int x = 0;
+	int x, y = 0;
 	int sum = 0;
 
 	if (argc == 1)
@@ -22,12 +22,13 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		x = atoi(argv[i]);
-		if (x == 0)
+		y = abs(x);
+		if (y == 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
-		sum = sum + x;
+		sum = sum + y;
 	}
 	printf("%d\n", sum);
 	return (0);
