@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		change = change + (cents / coins[i]);
 		if (cents % coins[i] == 0)
 			break;
-			cents = cents % coins[i];
+		cents = cents % coins[i];
 	}
 	printf("%d\n", change);
 	return (0);
