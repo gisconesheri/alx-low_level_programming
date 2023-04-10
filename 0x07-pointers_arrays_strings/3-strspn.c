@@ -42,9 +42,12 @@ unsigned int _strspn(char *s, char *accept)
 						/*printf("%c found, setting max to %d\n", s[i], i + 1);*/
 						max = m;
 					}
+					run = 0;
 				}
 			}
 		}
+		if (run == 1)
+			return (max);
 	}
 
 	/*printf("max is %d\n", max);*/
