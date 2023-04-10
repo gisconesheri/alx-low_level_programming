@@ -1,5 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
+/**
+ * main - adds all positive numbers supplied
+ * @argc: number of arguments provided
+ * @argv: numbers to be added
+ * Return: 1 if any number can't be converted, 0 otherwise
+ */
 
 int main(int argc, char *argv[])
 {
@@ -16,7 +22,7 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		x = atoi(argv[i]);
-		if (x <= 0)
+		if (x == 0)
 		{
 			printf("Error\n");
 			return (1);
