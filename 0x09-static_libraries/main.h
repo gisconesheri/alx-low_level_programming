@@ -1,3 +1,6 @@
+#ifndef MAIN_H
+#define MAIN_H
+
 void positive_or_negative(int i);
 int largest_number(int a, int b, int c);
 void print_remaining_days(int month, int day, int year);
@@ -50,3 +53,5 @@ void _print_rev_recursion(char *s);
 int _strlen_recursion(char *s);
 int factorial(int n);
 int _pow_recursion(int x, int y);
+
+#endif
