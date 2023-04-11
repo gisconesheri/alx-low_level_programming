@@ -1,6 +1,6 @@
 #include <stdlib.h>
 /**
- * strlen - calculates the length of a string
+ * _strlen - calculates the length of a string
  * @s: string to calculate length
  * Return: size of string
  */
@@ -28,7 +28,7 @@ char *_strdup(char *str)
 		return (NULL);
 	size = _strlen(str);
 
-	new_string = malloc(size * sizeof(char));
+	new_string = malloc((size + 1) * sizeof(char));
 
 	if (new_string == NULL)
 		return (NULL);
