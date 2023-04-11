@@ -1,3 +1,4 @@
+#include <stdlib.h>
 /**
  * free_grid - release memory used by alloc_grid
  * @grid: grid used
