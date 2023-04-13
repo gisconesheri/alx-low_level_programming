@@ -29,16 +29,13 @@ int get_len(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *new_string;
-	unsigned int len1, len2, i, new_len;
+	unsigned int len1, i, new_len;
 	int j = 0;
 
 	len1 = get_len(s1);
-	len2 = get_len(s2);
-
-	if (n >= len2)
-		new_len = len1 + len2;
-	else
-		new_len = len1 + n;
+	/*len2 = get_len(s2);*/
+	
+	new_len = len1 + n;
 
 	new_string = malloc(sizeof(char) * new_len);
 	if (new_string == NULL)
