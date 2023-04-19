@@ -16,8 +16,7 @@
 int main(int argc, char **argv)
 {
 	int (*oper)(int, int);
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[3]);
+	int num1, num2;
 
 	if (argc != 4)
 	{
@@ -25,6 +24,8 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
 	oper = get_op_func(argv[2]);
 
 	if (oper == NULL)
