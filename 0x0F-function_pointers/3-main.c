@@ -24,8 +24,6 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
 	oper = get_op_func(argv[2]);
 
 	if (oper == NULL)
@@ -34,6 +32,8 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
 	if (num2 == 0 && (*argv[2] == '/' || *argv[2] == '%'))
 	{
 		printf("Error\n");
