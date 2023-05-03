@@ -14,6 +14,7 @@ int main(void)
 
 	        head = NULL;
 						    print_listint(head);
-						    free_listint2(&head);
-						        return (0);
+						        free_listint2(&head);
+							    printf("%p\n", (void *)head);
+							        return (0);
 }
