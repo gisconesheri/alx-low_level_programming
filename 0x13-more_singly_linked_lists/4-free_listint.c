@@ -11,10 +11,15 @@ void free_listint(listint_t *head)
 	int size = 0;
 	int i;
 
-	while (current_node->next != NULL)
+	if (head == NULL)
+		size = 0;
+	else
 	{
-		size++;
-		current_node = current_node->next;
+		while (current_node->next != NULL)
+		{
+			size++;
+			current_node = current_node->next;
+		}
 	}
 	for (; size >= 0; size--)
 	{
