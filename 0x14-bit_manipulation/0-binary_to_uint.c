@@ -21,10 +21,10 @@ unsigned int binary_to_uint(const char *b)
 
 	for (len = 0; b[len] != '\0'; len++)
 		;
-
 	reverse_b = malloc(sizeof(char) * len);
 	if (reverse_b == NULL)
 		return (0);
+
 	for (; len >= 0; len--)
 	{
 		reverse_b[i] = b[len];
@@ -41,6 +41,5 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		multiple_of_two *= 2;
 	}
-	free(reverse_b);
 	return (num);
 }
