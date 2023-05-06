@@ -62,7 +62,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 
 	binary = malloc(sizeof(char) * 65);
 	true_binary = malloc(sizeof(char) * 65);
-	if (binary == NULL || true_binary == NULL)
+	if (binary == NULL || true_binary == NULL || index > 64)
 		return (-1);
 	tn = *n;
 	i = 0;
