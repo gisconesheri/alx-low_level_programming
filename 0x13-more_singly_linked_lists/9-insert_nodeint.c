@@ -32,7 +32,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		size++;
 		last_node = last_node->next;
 	}
-	printf("size is %u\n", size);
 	if (idx > size + 1)
 		return (NULL);
 	new_node = malloc(sizeof(listint_t));
