@@ -60,13 +60,14 @@ int set_bit(unsigned long int *n, unsigned int index)
 	unsigned int rem, i, len = 0;
 	unsigned long int tn = *n;
 
+	if (index > 64)
+		return (-1);
 	binary = malloc(sizeof(char) * 65);
 	true_binary = malloc(sizeof(char) * 65);
 	if (binary == NULL || true_binary == NULL)
 		return (-1);
 	tn = *n;
 	i = 0;
-
 	while (i <= 64)
 	{
 		rem = tn % 2;
@@ -84,7 +85,6 @@ int set_bit(unsigned long int *n, unsigned int index)
 			binary[i] = 49;
 		i++;
 	}
-
 	for (; i > 0; i--)
 	{
 		true_binary[len] = binary[i - 1];

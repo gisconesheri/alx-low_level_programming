@@ -11,20 +11,16 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	char *binary;
-	unsigned int rem, i, len = 0;
+	unsigned int rem, i = 0;
 	unsigned long int tn = n;
 
-	while (tn > 1)
-	{
-		tn = tn >> 1;
-		len++;
-	}
-
-	binary = malloc(sizeof(char) * (len + 1));
+	binary = malloc(sizeof(char) * 64);
+	if (binary == NULL)
+		return (-1);
 	tn = n;
 	i = 0;
 
-	while (i <= len)
+	while (i <= 64)
 	{
 		rem = tn % 2;
 		if (rem == 0)
@@ -36,7 +32,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	}
 
 	i = 0;
-	while (i <= len)
+	while (i <= 64)
 	{
 		if (i == index)
 		{
