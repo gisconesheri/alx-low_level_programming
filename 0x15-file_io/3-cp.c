@@ -8,7 +8,7 @@
  */
 void print_read_error(char *filename)
 {
-	dprintf(2, "Error: Can't read from file %s\n", filename);
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
 	exit(98);
 }
 
@@ -18,7 +18,7 @@ void print_read_error(char *filename)
  */
 void print_write_error(char *filename)
 {
-	dprintf(2, "Error: Can't write to %s\n", filename);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 	exit(99);
 }
 
@@ -28,7 +28,7 @@ void print_write_error(char *filename)
  */
 void print_close_error(int fd)
 {
-	dprintf(2, "Error: Can't close fd %d\n", fd);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 	exit(100);
 }
 /**
